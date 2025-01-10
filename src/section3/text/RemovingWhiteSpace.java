@@ -1,4 +1,4 @@
-package section3.people;
+package section3.text;
 
 public class RemovingWhiteSpace {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package section3.people;
+package section3.text;
 
 public class Substring {
     public static void main(String[] args) {

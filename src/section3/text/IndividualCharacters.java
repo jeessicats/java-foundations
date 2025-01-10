@@ -1,4 +1,4 @@
-package section3.people;
+package section3.text;
 
 public class IndividualCharacters {
     public static void main(String[] args) {
