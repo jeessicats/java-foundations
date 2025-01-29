@@ -32,7 +32,15 @@ public class CompoundInterestCalculation {
     }
 
     public static void main(String[] args) throws ParseException {
+        DecimalFormat decimalFormat = new DecimalFormat("R$#,###.##");
+        DecimalFormat percentForma = new DecimalFormat("%#");
         BigDecimal balance = CompoundInterestCalculation.getCompoundInterest("$10,000", "8", 10, "$1,000");
         System.out.println(moneyFormat.format(balance));
+
+        System.out.println(decimalFormat.format(balance));
+
+        System.out.println(percentFormat.format(.8));
+
+        System.out.printf("R$%,.2f%n", balance);
     }
 }
