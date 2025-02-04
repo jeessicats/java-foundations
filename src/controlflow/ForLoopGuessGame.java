@@ -2,7 +2,8 @@ package controlflow;
 
 import java.util.Random;
 
-public class DoWhileGuessGame {
+public class ForLoopGuessGame {
+
     public static final int MAX_ALLOWED_TRIES = 5;
 
     public static void main(String[] args) {
@@ -10,8 +11,7 @@ public class DoWhileGuessGame {
         System.out.printf("The random number is %d%n", randomNumber);
         String guessNumberStr = null;
 
-        int attempts = 1;
-        do {
+        for (int attempts = 1; attempts <= MAX_ALLOWED_TRIES; attempts++) {
             guessNumberStr = System.console().readLine("Enter a number between 1 and 10: ");
             if (guessNumberStr.matches("-?\\d{1,2}")) {
                 int guessNumber = Integer.parseInt(guessNumberStr);
@@ -19,17 +19,16 @@ public class DoWhileGuessGame {
                 if (guessNumber == randomNumber) {
                     String tryStr = attempts == 1 ? "try" : "tries";
                     System.out.printf("The number is %d. You got it in %d %s!%n", randomNumber, attempts, tryStr);
-                    return;
+                    break;
                 } else {
-                    attempts++;
-                    System.out.printf("You didn't get it!%n");
-                    if (attempts > MAX_ALLOWED_TRIES) {
-                        System.out.printf("You tried %d times. The random number is %d. Ending program now. %n", attempts-1, randomNumber);
+                    if (attempts == MAX_ALLOWED_TRIES) {
+                        System.out.printf("You tried %d times. The random number is %d. Ending program now. %n", attempts, randomNumber);
                         return;
+                    } else {
+                        System.out.printf("You didn't get it!%n");
                     }
                 }
             }
-        }  while (!"q".equals(guessNumberStr));
-
+        }
     }
 }
