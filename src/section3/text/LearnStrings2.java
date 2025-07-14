@@ -2,8 +2,13 @@ package section3.text;
 
 public class LearnStrings2 {
     public static void main(String[] args) {
-        String myText = "Hello World! Here is my first text.";
+        String myText = "Hello! Here is my first text.";
         System.out.println(myText.replace("first", "nice"));
+
+        System.out.println(myText.replaceFirst("text", "message")); // replaces only the first occurrence of "text" in the string
+        System.out.println(myText.replaceFirst("TEXT", "message")); // it is case-sensitive, so it won't replace "text" with "message" because "TEXT" is not found in the string
+
+        System.out.println(myText.replace('e', 'a')); // replaces all occurrences of 'e' with 'a'
 
         System.out.println(myText.toUpperCase());
         System.out.println(myText.toLowerCase());
