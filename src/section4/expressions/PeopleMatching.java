@@ -17,13 +17,9 @@ public class PeopleMatching {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(people);
 
-        matcher.find(15);
-        System.out.println(matcher.group("lastName"));
-        System.out.println(matcher.group("firstName"));
-        System.out.println(matcher.group("dateOfBirth"));
-
-        System.out.println(matcher.start());
-        System.out.println(matcher.end());
+        while (matcher.find()) {
+            System.out.printf("First Name: %s; Last Name: %s; Date of Birth: %s;%n", matcher.group("firstName"), matcher.group("lastName"), matcher.group("dateOfBirth"));
+        }
 
 
     }
