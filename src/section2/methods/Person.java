@@ -1,5 +1,9 @@
 package section2.methods;
 
+
+// Class is a blueprint for creating objects.
+// An object is an instance of a class.
+// A class can have methods, which are functions that belong to the class.
 public class Person {
     private String middleName = "Alan";
 
@@ -28,7 +32,7 @@ public class Person {
         // varargs are just arrays, so you can use them like arrays.
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // entry point of the program. THE PROGRAM STARTS FROM HERE.
         Person person = new Person();
 
         person.sayHello();
