@@ -25,7 +25,13 @@ public class Split {
         String[] emily = people[4].split(","); // splits the details of Emily into an array of substrings
 
         System.out.println(emily.length); // prints the number of details about Emily
+        System.out.println(emily[0]); // prints Emily's first name
+        System.out.println(emily[1]); // prints Emily's last name
+        System.out.println(emily[2]); // prints Emily's birth date
         System.out.println(emily[3]); // prints Emily's address
+        System.out.println(emily[4]); // prints Emily's city
+        System.out.println(emily[5]); // prints Emily's state
+
 
         // The split method is useful for parsing structured data, such as CSV files,
         // where each line contains multiple fields separated by a specific delimiter (in this case, a comma).
