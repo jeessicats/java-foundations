@@ -7,6 +7,8 @@ public class CaptureGroups {
     public static void main(String[] args) {
         // Expressão regular para dividir partes de um número de telefone
         // A string utiliza a sintaxe multilinha para maior clareza
+        // ?: é usado para indicar que o grupo é opcional
+
         String phoneNumberRegex = """
 # This is my regex to parse the parts of a phone number
 (?:(?<countryCode>\\d{1,2})[-.\\s]?)? # (Opcional) Captura o código do país (1 ou 2 dígitos) seguido de separador
