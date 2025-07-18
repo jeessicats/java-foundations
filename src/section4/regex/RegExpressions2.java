@@ -5,12 +5,16 @@ public class RegExpressions2 {
         // Teste da primeira expressão regular
         System.out.println("First regular expression: ");
         // Verifica se a string "Lat" segue o padrão: qualquer letra ou número seguido por "at"
-        System.out.println("Lat".matches("\\wat"));
+        System.out.println("Lat".matches("\\wat")); // \\w representa qualquer letra ou número
+        System.out.println("cat".matches("\\w\\w\\w")); // Verifica se a string tem exatamente 3 letras ou números
+        System.out.println("11".matches("\\d\\d")); // Verifica se a string tem exatamente 2 dígitos, não podem ser letras ou outros caracteres
 
         // Teste da segunda expressão regular
         System.out.println("Second regular expression: ");
         // Verifica se a string tem o formato "DDD-DDD-DDDD", onde D é um dígito
         System.out.println("321-333-7652".matches("\\d{3}[-.\\s]\\d{3}[-.\\s]\\d{4}"));
+
+        // \\s representa um espaço em branco, e [-.\\s] permite que o separador seja um hífen, ponto ou espaço
 
         // Teste da terceira expressão regular
         System.out.println("Third regular expression: ");
