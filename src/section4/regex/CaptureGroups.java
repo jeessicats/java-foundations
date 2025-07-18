@@ -17,12 +17,12 @@ public class CaptureGroups {
         // Número de telefone de exemplo a ser analisado
         String phoneNumber = "12 (321) 333-7658";
 
-        // Verifica se o número de telefone corresponde ao padrão definido na expressão regular
-        System.out.println(phoneNumber.matches(phoneNumberRegex));
-
         // Criação de um padrão (Pattern) a partir da expressão regular
         // A flag Pattern.COMMENTS permite comentários na expressão regular
         // Aviso: Pattern.compile tem um custo computacional, evite usá-lo repetidamente
+        // em loops ou chamadas frequentes
+        // A expressão regular é compilada em um padrão que pode ser usado para criar um matcher
+
         Pattern phoneNumPattern = Pattern.compile(phoneNumberRegex, Pattern.COMMENTS);
 
         // Matcher é usado para verificar se a string corresponde ao padrão e extrair grupos de captura
@@ -30,6 +30,8 @@ public class CaptureGroups {
 
         // Verifica se a string corresponde à expressão regular
         if (phoneNumMatcher.matches()) {
+
+            System.out.println(phoneNumber);
             // Extrai e imprime o grupo nomeado "countryCode" (código do país)
             System.out.format("Country code: %s\n", phoneNumMatcher.group("countryCode"));
 
