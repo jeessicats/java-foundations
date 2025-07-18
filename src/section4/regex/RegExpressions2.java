@@ -1,4 +1,4 @@
-package section4.expressions;
+package section4.regex;
 
 public class RegExpressions2 {
     public static void main(String[] args) {
