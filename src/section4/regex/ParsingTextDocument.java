@@ -16,6 +16,8 @@ public class ParsingTextDocument {
                 Cumulative GPA (Unweighted)	3.46
                 """;
 
+        // the * has a behavior greedy, meaning it will match as many characters as possible, so we use .* to match any character 0 or more times
+
         String regex = """
                 
                 Student\\sNumber:\\s(?<studentNumber>\\d{10}).* #Grab student number - .* matches any character 0 or more times, doesn't include new line or carriage return, thats why we use DOTALL

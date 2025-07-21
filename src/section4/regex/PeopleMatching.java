@@ -13,10 +13,17 @@ public class PeopleMatching {
             Chaplin, Charlie, 04/16/1889
             """;
 
+        // + is used to match one or more occurrences of the preceding element
+        // //w matches any word character (alphanumeric or underscore)
+        // \\n matches a newline character
+
         String regex = "(?<lastName>\\w+),\\s*(?<firstName>\\w+),\\s*(?<dateOfBirth>\\d{1,2}/\\d{1,2}/\\d{4})\\n";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(people);
 
+        // The matcher.find() method searches for the next subsequence of the input sequence that matches the pattern.
+        // It returns true if a subsequence of the input sequence matches the pattern, and false otherwise.
+        // it's different form using matcher.matches() which checks if the entire input sequence matches the pattern.
         while (matcher.find()) {
             System.out.printf("First Name: %s; Last Name: %s; Date of Birth: %s;%n", matcher.group("firstName"), matcher.group("lastName"), matcher.group("dateOfBirth"));
         }
