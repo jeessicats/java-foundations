@@ -9,7 +9,10 @@ public class NumbericWrapperClasses {
         Float myFloat = Float.valueOf(123.434f);
         storeDate(num1);
 
-        int age = Integer.parseInt("29");
+        // Parsing strings to primitive types
+        String myAge = "29";
+
+        int age = Integer.parseInt(myAge);
         double amount = Double.parseDouble("123.434");
         boolean flag = Boolean.parseBoolean("true");
 
@@ -19,6 +22,12 @@ public class NumbericWrapperClasses {
 
     }
 
+    /**
+     * This method is a placeholder for storing date-related information.
+     * Currently, it does not perform any operations.
+     *
+     * @param obj The object to be stored, which could represent a date or other information.
+     */
     public static void storeDate(Object obj) {
 
     }
